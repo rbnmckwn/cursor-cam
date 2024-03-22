@@ -1,0 +1,211 @@
+*::before,
+*::after {
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(189, 182, 182);
+    cursor: text;
+    font-weight: 800;
+}
+
+.text-container {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    color: yellow;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.camera-grid {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "eagles jellyfish manatee"
+        "kittens desert kalahari"
+        "kenya bay panda";
+}
+
+#eagles {
+    grid-area: eagles;
+    overflow: hidden;
+    position: relative;
+}
+
+#eagle-player {
+    position: absolute;
+    top: 20%; /* Adjust these values to change the video position */
+    left: 0;
+    transform: scale(2.5); /* Adjust this value to zoom the video */
+    display: none;
+    animation: fadeIn 2s;
+}
+
+#jellyfish {
+    grid-area: jellyfish;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+#jellyfish-player {
+    position: absolute;
+    top: 20%; /* Adjust these values to change the video position */
+    left: 0;
+    transform: scale(2.5); /* Adjust this value to zoom the video */
+    display: none;
+    animation: fadeIn 2s;
+}
+
+#manatee {
+    grid-area: manatee;
+    overflow: hidden;
+    position: relative;
+   
+}
+
+#manatee-player {
+    position: absolute;
+    top: 20%; /* Adjust these values to change the video position */
+    left: 0;
+    transform: scale(2.5); /* Adjust this value to zoom the video */
+    display: none;
+    animation: fadeIn 2s;
+}
+
+#kittens {
+    grid-area: kittens;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+#kittens-player {
+    position: absolute;
+    top: 20%; /* Adjust these values to change the video position */
+    left: 0;
+    transform: scale(2.5); /* Adjust this value to zoom the video */
+    display: none;
+    animation: fadeIn 2s;
+}
+
+#desert {
+    grid-area: desert;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+#desert-player {
+    position: absolute;
+    top: 20%; /* Adjust these values to change the video position */
+    left: 0;
+    transform: scale(2.5); /* Adjust this value to zoom the video */
+    display: none;
+    animation: fadeIn 2s;
+}
+
+#kalahari {
+    grid-area: kalahari;
+    overflow: hidden;
+    position: relative;
+   
+}
+
+#kalahari-player {
+    position: absolute;
+    top: 20%; /* Adjust these values to change the video position */
+    left: 0;
+    transform: scale(2.5); /* Adjust this value to zoom the video */
+    display: none;
+    animation: fadeIn 2s;
+}
+
+#kenya {
+    grid-area: kenya;
+    overflow: hidden;
+    position: relative;
+   
+}
+
+#kenya-player {
+    position: absolute;
+    top: 20%; /* Adjust these values to change the video position */
+    left: 0;
+    transform: scale(2.5); /* Adjust this value to zoom the video */
+    display: none;
+    animation: fadeIn 2s;
+}
+
+#bay {
+    grid-area: bay;
+    overflow: hidden;
+    position: relative;
+   
+}
+
+#bay-player {
+    position: absolute;
+    top: 20%; /* Adjust these values to change the video position */
+    left: 0;
+    transform: scale(2.5); /* Adjust this value to zoom the video */
+    display: none;
+    animation: fadeIn 2s;
+}
+
+#panda {
+    grid-area: panda;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+#panda-player {
+    position: absolute;
+    top: 20%; /* Adjust these values to change the video position */
+    left: 0;
+    transform: scale(2.5); /* Adjust this value to zoom the video */
+    display: none;
+    animation: fadeIn 2s;
+}
+
+@media  screen and (max-width: 500px) {
+    .camera-grid {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "eagles" 
+            "jellyfish" 
+            "manatee"
+            "kittens" 
+            "desert" 
+            "kalahari"
+            "kenya" 
+            "bay" 
+            "panda";
+    }
+}
